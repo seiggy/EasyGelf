@@ -1,0 +1,19 @@
+﻿{
+  "version": "0.4.6-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.5.0-rc2-24027",
+    "NLog": "4.4.0-beta11",
+    "EasyGelf.Core.NetCore": "0.4.6-*"
+  },
+  "scripts": {
+    "postcompile": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
+  },
+  "frameworks": {
+    "netstandard1.5": {
+      "imports": [ "dnxcore50", "netcoreapp1.0" ]
+    }
+  }
+}
